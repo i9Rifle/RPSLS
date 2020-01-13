@@ -10,15 +10,9 @@ namespace RPSLS
     {
         public string name;
 
-
         public Players()
         {
 
-        }
-        public Players(string name)
-        {
-            this.name = name;
-            Console.WriteLine("");
         }
     }
 }

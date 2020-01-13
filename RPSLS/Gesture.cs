@@ -6,12 +6,8 @@ using System.Threading.Tasks;
 
 namespace RPSLS
 {
-    public class CPU : Players
+    class Gesture
     {
-        public CPU(string name)
-        {
 
-        }
     }
-
 }

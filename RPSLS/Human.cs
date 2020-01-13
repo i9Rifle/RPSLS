@@ -10,8 +10,7 @@ namespace RPSLS
     {
         public Human(string name)
         {
-            this.name = (name);
-            Console.WriteLine("Player 1");
+
         }
     }
 }
