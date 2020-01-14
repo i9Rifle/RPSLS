@@ -6,12 +6,16 @@ using System.Threading.Tasks;
 
 namespace RPSLS
 {
-    public class CPU : Players
+    public class CPU : Player
     {
-        public CPU(string name)
+        public override void SetName()
+        {
+            name = "Dorian";
+        }
+        public override void ChooseGesture()
         {
 
         }
-    }
 
+    }
 }
