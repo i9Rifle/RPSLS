@@ -12,7 +12,7 @@ namespace RPSLS
         {
             Console.WriteLine("Welcome to Rock, Paper, Scissors, Lizard, Spock.");
             Console.WriteLine("Play single player (human  vs CPU) or multiplayer (human vs human).");
-            Console.WriteLine("Each match will be a 'best of seven' series");
+            Console.WriteLine("Each match will be a 'best of three' series");
             Console.WriteLine("Rules:");
             Console.WriteLine("Rock crushes Scissors");
             Console.WriteLine("Scissors cuts Paper");

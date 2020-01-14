@@ -10,26 +10,18 @@ namespace RPSLS
     {
         public string name;
         public int score;
-        public int randomNumber;
         public string gesture;
         public List<string> gestures;
+
 
         public Player()
         {
             gestures = new List<string> { $"Rock", "Paper", "Scissors", "Lizard", "Spock" };
-            randomNumber = RNG;
+            
         }
 
         public abstract void SetName();
 
         public abstract void ChooseGesture();
-
-    }
-
-
-    
-
-    
-
-    
+    }   
 }
