@@ -16,7 +16,21 @@ namespace RPSLS
             string numberOfPlayers = ChoseNumberOfPlayers();
             SetPlayers(numberOfPlayers);
 
-            Round();
+            while (player1.score < 2 && player2.score < 2)
+            {
+                Round();
+            }
+            if (player1.score == 2)
+            {
+                Console.WriteLine("Player 1 Wins Game!");
+                Console.ReadLine();
+            }
+            if (player2.score == 2)
+            {
+                Console.WriteLine("Player 2 Wins Game!");
+                Console.ReadLine();
+            }
+
 
         }
         public string ChoseNumberOfPlayers()
@@ -52,51 +66,62 @@ namespace RPSLS
             // if none of those, p2 wins
             if (player1.gesture == player2.gesture)
             {
-                Console.WriteLine("Draw!");
+                Console.WriteLine("Draw! Play again!");
             }
-            else if (player1.gesture = "Rock" && player2.gesture = "Scissors")
+            else if (player1.gesture == "Rock" && player2.gesture == "Scissors")
             {
                 Console.WriteLine("Player 1 Wins Round!");
+                player1.score++;
             }
-            else if (player1.gesture = "Paper" && player2.gesture = "Rock")
+            else if (player1.gesture == "Paper" && player2.gesture == "Rock")
             {
                 Console.WriteLine("Player 1 Wins Round!");
+                player1.score++;
             }
-            else if (player1.gesture = "Scissors" && player2.gesture = "Paper")
+            else if (player1.gesture == "Scissors" && player2.gesture == "Paper")
             {
                 Console.WriteLine("Player 1 Wins Round");
+                player1.score++;
             }
-            else if (player1.gesture = "Rock" && player2.gesture = "Lizard")
+            else if (player1.gesture == "Rock" && player2.gesture == "Lizard")
             {
                 Console.WriteLine("Player 1 Wins Round!");
+                player1.score++;
             }
-            else if (player1.gesture = "Lizard" && player2.gesture = "Spock")
+            else if (player1.gesture == "Lizard" && player2.gesture == "Spock")
             {
                 Console.WriteLine("Player 1 Wins Round");
+                player1.score++;
             }
-            else if (player1.gesture = "Spock" && player2.gesture = "Scissors")
+            else if (player1.gesture == "Spock" && player2.gesture == "Scissors")
             {
                 Console.WriteLine("Player 1 Wins Round");
+                player1.score++;
             }
-            else if (player1.gesture = "Scissors" && player2.gesture = "Lizard")
+            else if (player1.gesture == "Scissors" && player2.gesture == "Lizard")
             {
                 Console.WriteLine("Player 1 Wins Round!");
+                player1.score++;
             }
-            else if (player1.gesture = "Lizard" && player2.gesture = "Paper")
+            else if (player1.gesture == "Lizard" && player2.gesture == "Paper")
             {
                 Console.WriteLine("Player 1 Wins Round!");
+                player1.score++;
             }
-            else if (player1.gesture = "Paper" && player2.gesture = "Spock")
+            else if (player1.gesture == "Paper" && player2.gesture == "Spock")
             {
                 Console.WriteLine("Player 1 Wins Round!");
+                player1.score++;
             }
-            else if (player1.gesture = "Spock" && player2.gesture = "Rock")
+            else if (player1.gesture == "Spock" && player2.gesture == "Rock")
             {
-                Console.WriteLine("Player 1 Wins!");
+                Console.WriteLine("Player 1 Wins Round!");
+                player1.score++;
             }
             else
             {
-                Console.WriteLine("Player 2 Wins!");
+                Console.WriteLine("Player 2 Wins Round!");
+                player2.score++;
             }
         }
 
