@@ -46,12 +46,12 @@ namespace RPSLS
             }
             if (player1.score == 2)
             {
-                Console.WriteLine("Player 1 Wins Game!");
+                Console.WriteLine(player1.name + " Wins Game!");
                 Console.ReadLine();
             }
             if (player2.score == 2)
             {
-                Console.WriteLine("Player 2 Wins Game!");
+                Console.WriteLine(player2.name + " Wins Game!");
                 Console.ReadLine();
             }
         }

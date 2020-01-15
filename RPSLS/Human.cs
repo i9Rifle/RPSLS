@@ -35,6 +35,6 @@ namespace RPSLS
                     Console.WriteLine("Not valid Gesture try again!");
                 }
             }
-        }        }
+        }        
     }
 }

@@ -18,7 +18,8 @@ namespace RPSLS
         {
             gestures = new List<string> { $"Rock", "Paper", "Scissors", "Lizard", "Spock" };          
         }
-        //called in  validation of user input for gesture- "if (gestures.Contains(gesture))"
+        //called in validation of user input for gesture utilizing
+        //List<gesture> "if (gestures.Contains(gesture))"
 
 
         public abstract void SetName();
