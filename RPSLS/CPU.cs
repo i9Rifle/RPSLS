@@ -10,7 +10,7 @@ namespace RPSLS
     {
         public override void SetName()
         {
-            name = "Dorian";
+            name = "Megatron";
         }
         public override void ChooseGesture()
         {
