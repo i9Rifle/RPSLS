@@ -24,6 +24,9 @@ namespace RPSLS
             Console.WriteLine("Lizard eats Paper");
             Console.WriteLine("Paper disproves Spock");
             Console.WriteLine("Spock vaporzes Rock");
+
+            Game game = new Game();
+            game.RunGame();
         }
     }
 }

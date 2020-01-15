@@ -16,8 +16,7 @@ namespace RPSLS
 
         public Player()
         {
-            gestures = new List<string> { $"Rock", "Paper", "Scissors", "Lizard", "Spock" };
-            
+            gestures = new List<string> { $"Rock", "Paper", "Scissors", "Lizard", "Spock" };          
         }
 
         public abstract void SetName();
