@@ -28,6 +28,7 @@ namespace RPSLS
             Console.WriteLine("Lizard eats Paper");
             Console.WriteLine("Paper disproves Spock");
             Console.WriteLine("Spock vaporzes Rock");
+            Console.WriteLine("-----------------------------");
         }
         public void RunGame() // master method
         {
@@ -58,6 +59,7 @@ namespace RPSLS
         }
         public void SetPlayers(string NumberOfPlayers)
         {
+            //In case of invalid number of players input
             bool isValid = false;
             while(isValid == false)
             {
@@ -70,17 +72,15 @@ namespace RPSLS
                 else if (NumberOfPlayers == "2")
                 {
                     player1 = new Human();
-                    player2 = new CPU();
+                    player2 = new Human();
                     isValid = true;
                 }
                 else
                 {
-                    Console.WriteLine("Not valid Input try again");
+                    Console.WriteLine("Not valid Input try again!");
                     NumberOfPlayers = ChoseNumberOfPlayers();
                 }
             }
-            //Validation for bad user input
-            
         }
         public void Round()
         {
@@ -88,7 +88,6 @@ namespace RPSLS
             player2.ChooseGesture();
             CompareGestures();
         }
-
         public void CompareGestures()
         {
             // check tie first
