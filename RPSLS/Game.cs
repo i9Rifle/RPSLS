@@ -11,8 +11,27 @@ namespace RPSLS
         Player player1;
         Player player2;
 
+
+        public void WelcomeMessage()
+        {
+            Console.WriteLine("Welcome to Rock, Paper, Scissors, Lizard, Spock!");
+            Console.WriteLine("Play single player (human  vs CPU) or multiplayer (human vs human)");
+            Console.WriteLine("Each match will be a 'best of three' series");
+            Console.WriteLine("Rules:");
+            Console.WriteLine("Rock crushes Scissors");
+            Console.WriteLine("Scissors cuts Paper");
+            Console.WriteLine("Paper covers Rock");
+            Console.WriteLine("Rock crushes Lizard");
+            Console.WriteLine("Lizard poisons Spock");
+            Console.WriteLine("Spock smashes Scissors");
+            Console.WriteLine("Scissors decapitates Lizard");
+            Console.WriteLine("Lizard eats Paper");
+            Console.WriteLine("Paper disproves Spock");
+            Console.WriteLine("Spock vaporzes Rock");
+        }
         public void RunGame() // master method
         {
+            WelcomeMessage();
             string numberOfPlayers = ChoseNumberOfPlayers();
             SetPlayers(numberOfPlayers);
 
@@ -30,8 +49,6 @@ namespace RPSLS
                 Console.WriteLine("Player 2 Wins Game!");
                 Console.ReadLine();
             }
-
-
         }
         public string ChoseNumberOfPlayers()
         {
@@ -41,16 +58,29 @@ namespace RPSLS
         }
         public void SetPlayers(string NumberOfPlayers)
         {
-            if(NumberOfPlayers == "1")
+            bool isValid = false;
+            while(isValid == false)
             {
-                player1 = new Human();
-                player2 = new CPU();
+                if (NumberOfPlayers == "1")
+                {
+                    player1 = new Human();
+                    player2 = new CPU();
+                    isValid = true;
+                }
+                else if (NumberOfPlayers == "2")
+                {
+                    player1 = new Human();
+                    player2 = new CPU();
+                    isValid = true;
+                }
+                else
+                {
+                    Console.WriteLine("Not valid Input try again");
+                    NumberOfPlayers = ChoseNumberOfPlayers();
+                }
             }
-            else if(NumberOfPlayers == "2")
-            {
-                player1 = new Human();
-                player2 = new CPU();
-            }
+            //Validation for bad user input
+            
         }
         public void Round()
         {
